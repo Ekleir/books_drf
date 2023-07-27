@@ -47,8 +47,6 @@ class BooksApiTestCase(APITestCase):
             annotated_likes=Count(Case(When(userbookrelation__like=True, then=1))))
         response = self.client.get(url)
         serializer_data = BooksSerializer(books[0]).data
-        print('serializer_data', serializer_data)
-        print('books', books)
         self.assertEqual(status.HTTP_200_OK, response.status_code)
         self.assertEqual(serializer_data, response.data)
 
