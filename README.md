@@ -1,6 +1,7 @@
 # books_drf
 Work with DRF <br>
 <ul>
+  <li>Подключаю PostgreSQL вместо SQLite.</li>
   <li>Создаю несколько моделей, одну из них использую для ManyToMany, вместо автоматического создания в БД.</li>
   <li>Для модели Book создаю UserBookRelation, чтобы перенести логику взаимодействия User с Book в отдельную таблицу.</li>
   <li>Задаю логику обработки json в ModelSerializer.</li>
